@@ -1,4 +1,4 @@
-# MERN - MAY 2022
+# MERN - JULY 2022
 
 [![Open in Visual Studio Code](https://img.shields.io/badge/open%20in%20vscode-blue??style=for-the-badge&logo=visualstudiocode)](https://open.vscode.dev/jupiterorbita/MERN_JULY_2022)
 <!-- [![Open in Visual Studio Code](https://img.shields.io/badge/open%20in%20vscode-blue?style=flat-square&logo=visualstudiocode)](https://open.vscode.dev/jupiterorbita/MERN_MAY_2022) -->
