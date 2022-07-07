@@ -43,11 +43,11 @@
             document.getElementById(id).style = "background-color: " + color;
         }
         const mouseOverFunction = (el) => {
-            let val = getValueFromId("inputText");
-            console.log(val);
-            el.style = "background-color:" + val;
+            // let val = getValueFromId("inputText");
+            // console.log(val);
+            // el.style = "background-color:" + val;
             // alternative way
-            // el.style = "background-color:" + getValueFromId("inputText");
+            el.style = "background-color:" + getValueFromId("inputText");
         }
     </script>
 </body>
