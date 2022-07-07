@@ -8,12 +8,12 @@ const Form = (props) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");  
 
-    const [user, setUser] = useState({})
+    const [newUserObj, setNewUserObj] = useState({})
     
     const createUser = (e) => {
         e.preventDefault();
         console.log("submitted");
-        
+
         const newUser = { 
             username,
             email, 
@@ -23,7 +23,7 @@ const Form = (props) => {
         setUsername("");
         setEmail("");
         setPassword("");
-        setUser(newUser);
+        setNewUserObj(newUser);
     };
 
     const userNameHandler = (value) => {
@@ -61,7 +61,7 @@ const Form = (props) => {
             <button>submit</button>
         </form>
         <hr />
-        <Display user={user}/>
+        <Display newUserObj={newUserObj}/>
         </fieldset>
     )
 }

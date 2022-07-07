@@ -5,7 +5,7 @@ const Display = (props) => {
         <fieldset>
             <legend>Display.jsx</legend>
             <p>
-                username: {JSON.stringify(props.user)}
+                username: {JSON.stringify(props.newUserObj)}
             </p>
 
 
