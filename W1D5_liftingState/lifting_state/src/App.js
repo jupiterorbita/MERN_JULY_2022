@@ -7,6 +7,29 @@ function App() {
 
   const [animals, setAnimals] = useState(["🦓", "🦁", "🐘", "🐒"]);
 
+  const [people, setPeople] = useState([
+    {
+      name: "Toad",
+      age: 30
+    },
+    {
+      name: "Mario",
+      age: 35
+    },
+    {
+      name: "Luigi",
+      age: 33
+    },
+    {
+      name: "Princess Peach",
+      age: 30
+    }
+  ])
+
+  const addPerson = (newPerson) => {
+    setPeople([...people, newPerson])
+    
+  }
   const addAnimal = (newAnimal) => {
     console.log("hello " + newAnimal);
     // to append something to our state
@@ -25,12 +48,18 @@ function App() {
   return (
     <fieldset>
       <legend>App.js</legend>
-      {JSON.stringify(animals)}
+      {JSON.stringify(people)}
       <div className="App">
         <h1>lifting state</h1>
         <hr />
-        <Form addAnimal={addAnimal} animals={animals} setAnimals={setAnimals}/>
-        <Display animals={animals}/>
+        <Form 
+          addAnimal={addAnimal} 
+          animals={animals} 
+          setAnimals={setAnimals}
+          addPerson={addPerson}
+        />
+        {/* <Display animals={animals}/> */}
+        <Display people={people}/>
       </div>
     </fieldset>
   );

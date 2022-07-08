@@ -12,12 +12,18 @@ const Display = (props) => {
     return (
         <fieldset>
             <legend>Display.jsx</legend>
-            {JSON.stringify(props.animals)}
+            {/* {JSON.stringify(props.people)} */}
             <div>
                 {
-                    props.animals.map((animal, idx) => {
+                    props.people.map((person, idx) => {
                         return (
-                            <p key={idx}>{idx+1} -- {animal}</p>
+                            <div key={idx}>
+                                <p>
+                                {person.name}    
+                                </p>
+                                {person.age}
+                                <hr />
+                            </div>
                         )
                     })
                 }
