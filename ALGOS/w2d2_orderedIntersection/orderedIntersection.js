@@ -4,8 +4,9 @@
   Output: only the shared values between the two arrays (deduped).
   Venn Diagram Visualization (bottom) https://i.ytimg.com/vi/sdflTUW6gHo/maxresdefault.jpg
 */
-
+//                            a
 const arrA1 = [0, 1, 2, 2, 2, 7];
+//                         b
 const arrB1 = [2, 2, 6, 6, 7];
 const expected1 = [2, 7];
 
@@ -30,11 +31,9 @@ const expected3 = [];
  *    sorted and contains only the shared values between the two arrays
  *    deduped.
  */
- function orderedIntersection(sortedA, sortedB) { }
-
-/**
- * this function will say hello
- */
-function hi() {
+function orderedIntersection(sortedA, sortedB) {
 
 }
+
+orderedIntersection(arrA1, arrB1)
+
