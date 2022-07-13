@@ -7,6 +7,11 @@ const Hero = (props) => {
     // instantiate useNavigate
     const navigate = useNavigate()
 
+    // this is how we extract keys from the route
+    // const {unicornId, whatever} = useParams();
+    // console.log(unicornId, whatever);
+    // localhost:3000/hero/23
+    // <Route path='/hero/:urlVar' element={<Hero/>}/>
     const { urlVar } = useParams()
 
     const [hero, setHero] = useState(null)
