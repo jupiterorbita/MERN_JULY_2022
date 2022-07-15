@@ -5,17 +5,11 @@
     - top right to bottom left diagonal
 */
 const squareMatrix1 = [
-    [1, 2, 3], // arr[0][0]                   arr[0][arr.length - 1]
-    [4, 5, 6], // arr[1][1]                   arr[1][1]
-    [9, 8, 9], // arr[2][arr.length - 1]      arr[2][0]
+    [1, 2, 3], //                                
+    [4, 5, 6], //                               
+    [9, 8, 9], //                                 
 ];
 const expected1 = 2;
-//                 0       1       2 
-//            0   1   2
-// const arr = [[10,20,30],   50,    99,    11];
-//        arr[0][0]                arr[3]
-//         arr[0][1]
-
 
 /* 
   left to right diagonal: 1 + 5 + 9 = 15
