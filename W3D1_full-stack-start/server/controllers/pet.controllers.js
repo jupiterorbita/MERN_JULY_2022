@@ -24,7 +24,10 @@ module.exports.createNewPet = (req, res) => {
     console.log(req.body);
     Pet.create(req.body)
         .then(newlyCreatedPet => res.json({ pet: newlyCreatedPet }))
-        .catch(err => res.json({ message: 'Something went wrong', error: err }));
+        .catch(err => {
+            console.log("server create error!!!");
+            res.json({ message: 'SERVER ERROR ❌❌ Something went wrong', error: err })
+        });
 }
 
 // READ ONE
