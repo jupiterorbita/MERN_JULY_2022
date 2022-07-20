@@ -23,13 +23,12 @@ module.exports = {
         console.log(req.body); // if it's undefined check middleware
         Car.create(req.body)
             .then( newCar => {
-                console.log("DB Success created new Note");
+                console.log("DB Success created new car");
                 return res.json(newCar)
             })
             .catch(err => {
-                console.log("DB ERROR crating note");
-                // 🆘 return to the client a 400 status to trigger React's .catch()
-                return res.json(err)
+                console.log("DB ERROR crating car");
+                return res.status(400).json(err)
             })
     },
 
@@ -51,7 +50,7 @@ module.exports = {
             new: true, runValidators: true
         })
             .then(updatedCar => res.json(updatedCar))
-            .catch(err => res.json(err))
+            .catch(err => res.status(400).json(err))
     },
 
     // DELETE
