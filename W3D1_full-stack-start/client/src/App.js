@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     axios.get("http://localhost:8000/api/pets")
       .then(res => {
-        console.log(res.data);
+        console.log(res.data.allDaPets);
         setPets(res.data.allDaPets);
       })
       .catch(err => {
