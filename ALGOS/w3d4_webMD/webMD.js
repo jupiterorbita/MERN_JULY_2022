@@ -82,6 +82,7 @@ Output: []
 // edge case if no matches return null
 
 function webMD(ailments, meds) { }
+
 console.log(webMD(["pain"], medications));
 console.log(webMD(["pain", "inflammation", "depression"], medications));
 console.log(webMD(["existential dread"], medications));
