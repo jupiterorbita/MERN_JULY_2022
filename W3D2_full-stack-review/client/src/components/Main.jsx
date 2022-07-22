@@ -15,6 +15,18 @@ const Main = (props) => {
             .catch(err => console.log(err))
     }, [])
 
+    // if we want a delete here ¯\_(ツ)_/¯
+    const deleteCar = (id) => {
+        console.log(id);
+        axios.delete(`http://localhost:8000/api/cars/${id}`)
+            .then(res => {
+                console.log(res.data);
+                const filteredCars = cars.filter((car) => car._id != id);
+                setCars(filteredCars);
+            })
+            .catch( err => console.log(err))
+    }
+
     return (
         <div>
             <h1>All cars</h1>
@@ -30,7 +42,9 @@ const Main = (props) => {
                             <p style={{ backgroundColor: "white" }}>
                                 favorite: {car.favorite ? "♥" : "--"}
                             </p>
-                            <Link to={`/update/${car._id}`}>UPDATE</Link>
+                            <Link to={`/update/${car._id}`}>UPDATE</Link> <br />
+                            {/* optional delete here ¯\_(ツ)_/¯ */}
+                            <button onClick={() => deleteCar(car._id)}>DELETE ME</button>
                         </div>
                     )
                 })

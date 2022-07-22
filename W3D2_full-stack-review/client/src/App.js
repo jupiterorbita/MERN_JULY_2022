@@ -14,7 +14,6 @@ function App() {
       <Link to="/cars">Home</Link> | 
       <Link to="/create">create</Link>  
 
-
       <Routes>
         {/* MAIN - ALL CARS */}
         <Route path="/cars" element={<Main/>} />

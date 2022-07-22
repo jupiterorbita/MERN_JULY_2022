@@ -32,12 +32,13 @@ const Create = (props) => {
             })
             .catch(err => {
                 console.log("REACT ERROR");
+                console.log(err);
                 console.log(err.response.data);
 
-                const errorResponse = err.response.data.errors; // Get the errors from err.response.data
+                const errorResponseObj = err.response.data.errors; // Get the errors from err.response.data
                 const errorArr = []; // Define a temp error array to push the messages in
-                for (const key of Object.keys(errorResponse)) { // Loop through all errors and get the messages
-                    errorArr.push(errorResponse[key].message)
+                for (const key of Object.keys(errorResponseObj)) { // Loop through all errors and get the messages
+                    errorArr.push(errorResponseObj[key].message)
                 }
                 // Set Errors
                 setErrors(errorArr);
